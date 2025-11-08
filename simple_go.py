@@ -19,9 +19,17 @@ def who_won(board):
     @return [int]: return 1 if player 1 won, 2 if player 2 won, 0 if tie.
     """
 
-    # TODO: initialize two variables to record the stones of two players
+     # initialize counters
+    player1_count = 0
+    player2_count = 0
 
-    # TODO: use two level loop to check the value of every spot, which is the item of the nested list, read the documentation for details
+    # iterate through the board
+    for row in board:
+        for spot in row:
+            if spot == 1:
+                player1_count += 1
+            elif spot == 2:
+                player2_count += 1
 
     if player1_count > player2_count:
         return 1
